@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://threejs.org/build/three.min.js"></script>
+
+    <script>
+        // Set up the scene
+        var scene = new THREE.Scene();
+        scene.background = new THREE.Color(0xdddddd)
+
+        var camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 5000);
+        
+        hlight = new THREE.AmbientLight(0x404040, 100);
+        scene.add(hlight)
+
+        var renderer = new THREE.WebGLRenderer();
+      
+        // Set renderer size
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      
+        // Append renderer to the DOM
+        document.body.appendChild(renderer.domElement);
+      
+      </script>
+      
+
+    <script>
+
+        function init() {
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0xdddddd)
+
+            camera = new THREE.PerspectiveCamera(40, window.innerWidth/window.innerHeight,1,5000)
+
+            hlight = new THREE.AmbientLight(0x404040, 100);
+            scene.add(hlight)
+
+            renderer = new THREE.WebGLRenderer({antialias:true});
+            renderer.SetSize(window.innerWidth,window.innerHeight);
+            document.body.appendChild(renderer.domElement)
+        }
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
+
