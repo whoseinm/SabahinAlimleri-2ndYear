@@ -42,6 +42,8 @@ groundMesh.receiveShadow = false;
 scene.add(groundMesh);
 
 const spotLight = new THREE.SpotLight(0xFDB813 ,  50, 100, 50, 1);
+const light = new THREE.AmbientLight( 0xFDB813 , 0.2); // soft white light
+scene.add( light );
 spotLight.position.set(40, 40, 40);
 spotLight.castShadow = true;
 spotLight.shadow.bias = 0;
